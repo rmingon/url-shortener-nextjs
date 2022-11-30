@@ -51,12 +51,20 @@ export default function Home() {
           ></Card>
         </div>
       </section>
-      <section>
-        <div className="bg-violet-900 h-10 rotate-2 mt-12">
-
-        </div>
-        <div className="bg-violet-900 h-10 -mt-5">
-
+      <section className="mt-24">
+        <div className="bg-violet-900 h-10 rotate-2 mt-12"></div>
+        <div className="bg-violet-900 h-56 -mt-5 px-24">
+          <div className={'flex justify-around'}>
+            <span className={'font-roboto-bold text-gray-200 text-4xl z-10 w-2/3 mt-12'}>
+              Build custom audiance for <span className={'text-yellow-500'}>every customer</span>
+            </span>
+            <Image className={'z-10 -mt-10'}
+              src={'/7922057.png'}
+                   width={'300'}
+                   height={'300'}
+                   alt={''}>
+            </Image>
+          </div>
         </div>
       </section>
     </div>
