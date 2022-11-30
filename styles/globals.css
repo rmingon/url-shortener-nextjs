@@ -5,7 +5,6 @@
 @font-face {
     font-family: 'RubikMicrobe';
     src: url('../asset/fonts/RubikMicrobe-Regular.ttf');
-    src: url('../asset/fonts/RubikMicrobe-Regular.ttf');
     font-weight: 400;
     font-style: normal;
 }
@@ -13,7 +12,17 @@
 @font-face {
     font-family: 'Roboto-Thin';
     src: url('../asset/fonts/Roboto-Thin.ttf');
-    src: url('../asset/fonts/Roboto-Thin.ttf');
+}
+
+@font-face {
+    font-family: 'Roboto-Regular';
+    src: url('../asset/fonts/Roboto-Regular.ttf');
+}
+
+
+@font-face {
+    font-family: 'Roboto-Bold';
+    src: url('../asset/fonts/Roboto-Bold.ttf');
 }
 
 .font-microbe{
@@ -23,6 +32,17 @@
 
 .font-roboto-thin{
     font-family: 'Roboto-Thin', sans-serif;
+    font-weight: 400;
+}
+
+.font-roboto-regular{
+    font-family: 'Roboto-Regular', sans-serif;
+    font-weight: 400;
+}
+
+
+.font-roboto-bold{
+    font-family: 'Roboto-Bold', sans-serif;
     font-weight: 400;
 }
 

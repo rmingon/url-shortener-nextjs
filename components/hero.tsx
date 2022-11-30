@@ -1,16 +1,35 @@
 export default function Hero() {
   return (
-    <div className="container h-screen flex justify-center items-center ">
-      <div className="relative">
-        <div className="absolute top-4 left-3">
-          <i className="fa fa-search text-gray-400 z-20 hover:text-gray-500"></i>
+    <div className={'px-24 lg:px-52 w-full flex flex-col'}>
+      <div className={'text-center flex flex-col w-full items-center mt-10'}>
+        <span className='flex font-roboto-bold text-5xl text-purple-800'>Create short links!</span>
+        <p className='flex font-roboto-thin mt-2'>Custom and track your links with this simple tool</p>
+      </div>
+      <div className="h-44 mt-24 flex w-full bg-gray-100/[.60] shadow-2xl rounded-2xl flex-col ">
+        <div className="flex w-full items-center justify-center mt-6">
+            <div className="relative w-11/12 px-6">
+              <div className="absolute top-7 left-8">
+                <svg className={'stroke-slate-300'} width="26" height="26" viewBox="0 0 21 21"><path fill="none" stroke-linecap="round" stroke-linejoin="round" d="m9.5 7.328l1-1a2.828 2.828 0 0 1 4 4l-1 1M10.328 14.5l-1 1a2.828 2.828 0 1 1-4-4l1-1m1.172-5v-3m-5 5h3m8 11v-3m2-2h3"/></svg>
+              </div>
+              <input type="text" className="bg-gray-200/[.60] h-20 w-full pl-12 pr-24 rounded-lg z-0 text-xl"
+                     placeholder="Url to shorten..."/>
+              <div className="absolute top-4 right-10">
+                <button className="shadow-2xl h-12 w-24 text-gray-200 rounded-lg from-purple-600 bg-gradient-to-r to-purple-900 hover:bg-violet-900 transition duration-200 hover:shadow-xl active:shadow-inner ring-2 ring-offset-2 ring-purple-500/50">Shorten</button>
+              </div>
+            </div>
         </div>
-        <input type="text" className="h-14 w-96 pl-10 pr-20 rounded-lg z-0 focus:shadow focus:outline-none"
-               placeholder="Search anything..."/>
-        <div className="absolute top-2 right-2">
-          <button className="h-10 w-20 text-white rounded-lg bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-blue-500 hover:to-cyan-500 transition duration-200">Shorten</button>
+        <div className={'mt-8 flex flex-row justify-center items-center space-x-1 cursor-pointer'}>
+          <p className={'text-center text-xs'}>
+            More options
+          </p>
+          <span>
+            <svg width="22" height="22" viewBox="0 0 21 21"><path fill="none" stroke="#888888" stroke-linecap="round" stroke-linejoin="round" d="m14.5 8.5l-4 4l-4-4"/></svg>
+          </span>
         </div>
       </div>
+      <span className="text-center mt-4 text-gray-400 text-xs">
+        Free to use, simple, what else ?
+      </span>
     </div>
   )
 }
