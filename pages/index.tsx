@@ -40,13 +40,13 @@ export default function Home() {
             count={1}
           ></Card>
           <Card
-            svg={'<svg width="42" height="42" viewBox="0 0 24 24"><g fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><rect width="18" height="14" x="3" y="5" rx="2"/><path d="M6 8h.01M9 8h.01"/></g></svg>'}
+            svg={'<svg width="32" height="32" viewBox="0 0 24 24"><g fill="none" stroke="#888888" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><rect width="16" height="16" x="4" y="4" rx="2"/><path d="M7 15v2m3-6v6m3-4v4"/></g></svg>'}
             comment={'Lorem ipsum dolor sit amet, consectetur adipisicing elit.ssimus quasi recusandae rem ullam voluptate!'}
             title={'Track Click'}
             count={2}
           ></Card>
           <Card
-            svg={'<svg width="42" height="42" viewBox="0 0 24 24"><path fill="none"  stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12h4l3 8l4-16l3 8h4"/></svg>'}
+            svg={'<svg width="32" height="32" viewBox="0 0 24 24"><g fill="none" stroke="#888888" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><circle cx="14" cy="6" r="2"/><path d="M4 6h8m4 0h4"/><circle cx="8" cy="12" r="2"/><path d="M4 12h2m4 0h10"/><circle cx="17" cy="18" r="2"/><path d="M4 18h11m4 0h1"/></g></svg>'}
             comment={'Lorem ipsum dolor sit amet, consectetur adipisicing elit.ssimus quasi recusandae rem ullam voluptate!'}
             title={'Statistics'}
             count={3}
@@ -55,7 +55,7 @@ export default function Home() {
       </section>
       <section className="mt-24">
         <div className="bg-violet-900 h-10 rotate-2 mt-12"></div>
-        <div className="bg-violet-900 h-[112] -mt-5 px-24">
+        <div className="bg-violet-900 h-[112] -mt-6 px-24">
           <div className={'flex justify-around'}>
             <div className="z-10 pr-10 mt-4">
               <span className={'font-roboto-bold text-gray-200 text-4xl w-2/3 mt-12'}>

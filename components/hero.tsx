@@ -2,7 +2,7 @@ export default function Hero() {
   return (
     <div className={'px-24 lg:px-52 w-full flex flex-col'}>
       <div className={'text-center flex flex-col w-full items-center mt-10'}>
-        <span className='flex font-roboto-bold text-5xl text-purple-800'>Create short links!</span>
+        <span className='flex font-roboto-bold text-5xl text-purple-800 mt-4'>Create short links!</span>
         <p className='flex font-roboto-thin mt-2'>Custom and track your links with this simple tool</p>
       </div>
       <div className="h-44 mt-24 flex w-full bg-gray-100/[.60] shadow-2xl rounded-2xl flex-col ">
