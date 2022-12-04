@@ -11,7 +11,7 @@ export default function Contact() {
       </div>
       <div className="flex w-full items-center justify-center mt-6">
         <div className="relative w-full px-32">
-          <input type="text" className="bg-gray-100 h-12 w-full pl-8 pr-24 rounded-lg z-0 text-xl"
+          <input type="text" className="bg-gray-100 h-12 w-full pl-3 pr-24 rounded-lg z-0 text-xl"
                  placeholder="Email..."/>
           <div className="absolute top-1 right-1 px-32">
             <button className="shadow-2xl h-10 w-24 text-gray-200 rounded-lg bg-amber-500 hover:bg-amber-600 transition duration-200 hover:shadow-xl active:shadow-inner">Subscribe</button>
