@@ -1,4 +1,5 @@
 import Document, {Html, Head, Main, NextScript, DocumentContext} from "next/document";
+import TopBar from "../components/topbar";
 
 class MainDocument extends Document {
   static async getInitialProps(ctx: DocumentContext) {
@@ -9,9 +10,9 @@ class MainDocument extends Document {
   render() {
     return (
       <Html>
-        <Head />
+        <Head title={'Url shortener'} />
         <body>
-        <Main />
+        <Main></Main>
         <NextScript />
         <div id="modal-root"></div>
         </body>
