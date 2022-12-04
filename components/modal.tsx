@@ -4,11 +4,13 @@ import ReactDOM from "react-dom";
 interface ModalProps {
   show: boolean;
   onClose: () => void;
-  children: string;
+  children: Element;
   title?: string;
+  width?: string;
+  height?: string;
 }
 
-const Modal = ({ show, onClose, children, title }: ModalProps) => {
+const Modal = ({ show, onClose, children, title, width, height }: ModalProps) => {
   const [isBrowser, setIsBrowser] = useState(false);
 
   useEffect(() => {
@@ -22,7 +24,7 @@ const Modal = ({ show, onClose, children, title }: ModalProps) => {
 
   const modalContent = show ? (
     <div className="absolute top-0 left-0 h-full w-full flex justify-center items-center bg-gray-600/50 magicTime vanishIn">
-      <div className="bg-white w-2/3 h-2/3 rounded p-4">
+      <div className={`bg-white h-2/3 rounded p-4 ${width ? width : 'w-2/3'} ${height ? height : 'h-2/3'}`}>
         <div className="flex text-2xl justify-between">
           <div>
             {title}
@@ -32,7 +34,7 @@ const Modal = ({ show, onClose, children, title }: ModalProps) => {
           </a>
         </div>
 
-        <div className="StyledModalBody">{children}</div>
+        <div>{children}</div>
       </div>
     </div>
   ) : null;
