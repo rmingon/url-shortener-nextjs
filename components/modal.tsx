@@ -1,10 +1,10 @@
-import React, {Component, useEffect, useState} from "react";
+import React, {Component, ReactElement, useEffect, useState} from "react";
 import ReactDOM from "react-dom";
 
 interface ModalProps {
   show: boolean;
   onClose: () => void;
-  children: Element;
+  children: ReactElement;
   title?: string;
   width?: string;
   height?: string;
