@@ -2,49 +2,13 @@ import Image from "next/image";
 import Hero from "../components/hero";
 import Contact from "../components/contact";
 import Footer from "../components/footer";
-import Modal from "../components/modal";
-import {useState} from "react";
 import Cards from "../components/cards";
-import SignIn from "../components/sign-in";
-import SignUp from "../components/sign-up";
+import TopBar from "../components/topbar";
 
 export default function Home() {
-  const [showModalSignIn, setShowModalSignIn] = useState(false);
-  const [showModalSignUp, setShowModalSignUp] = useState(false);
-
   return (
     <div className='font-roboto-thin'>
-      <header className='flex space-x-3 items-center mt-5 justify-between px-5'>
-        <Image src={'/vercel.svg'} width={'100'} height={'100'} alt={''} className={'mr-10'} />
-        <ul className="flex space-x-3">
-          <li className="cursor-pointer">Features</li>
-          <li className="cursor-pointer">Developers</li>
-          <li className="cursor-pointer">Pricing</li>
-          <li className="cursor-pointer">About</li>
-        </ul>
-        <Modal
-          onClose={() => setShowModalSignIn(false)}
-          show={showModalSignIn}
-          title={""}
-          height="w-auto"
-          width="h-auto"
-        >
-          <SignIn></SignIn>
-        </Modal>
-        <Modal
-          onClose={() => setShowModalSignUp(false)}
-          show={showModalSignUp}
-          title={""}
-          height="w-auto"
-          width="h-auto"
-        >
-          <SignUp></SignUp>
-        </Modal>
-        <ul className="flex space-x-3 mr-2 items-center ">
-          <li onClick={() => setShowModalSignIn(true)} className="cursor-pointer px-2 py-1 bg-gray-100 rounded-xl">Sign in</li>
-          <li onClick={() => setShowModalSignUp(true)}>Sign up</li>
-        </ul>
-      </header>
+      <TopBar></TopBar>
       <div className='absolute font-microbe rotate-6 text-12xl text-purple-100 -z-10 top-20 left-1 text-center sm:text-9xl lg:text-12xl'>
         BEST URL SHORTENER
       </div>
@@ -83,9 +47,7 @@ export default function Home() {
             Statistics
           </div>
         </div>
-        <div className="h-24 bg-gradient-to-b from-transparent to-violet-900 -mt-24 z-10">
-
-        </div>
+        <div className="h-24 bg-gradient-to-b from-transparent to-violet-900 -mt-24 z-10"></div>
       </section>
       <section className="bg-violet-900">
         <div className="flex px-24 justify-between text-center text-gray-200">

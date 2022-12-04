@@ -33,7 +33,6 @@ const Modal = ({ show, onClose, children, title, width, height }: ModalProps) =>
             <svg width="32" height="32" viewBox="0 0 48 48"><path fill="none" stroke="#888888" stroke-linecap="round" stroke-linejoin="round" stroke-width="4" d="m14 14l20 20m-20 0l20-20"/></svg>
           </a>
         </div>
-
         <div>{children}</div>
       </div>
     </div>
