@@ -1,4 +1,9 @@
+import {useState} from "react";
+
 export default function Hero() {
+
+  const [optionsOpen, setOptionsOpen] = useState(false)
+
   return (
     <div className={'px-24 lg:px-52 w-full flex flex-col'}>
       <div className={'text-center flex flex-col w-full items-center mt-10'}>
@@ -18,13 +23,20 @@ export default function Hero() {
               </div>
             </div>
         </div>
-        <div className={'mt-8 flex flex-row justify-center items-center space-x-1 cursor-pointer'}>
-          <p className={'text-center text-xs'}>
-            More options
-          </p>
-          <span>
-            <svg width="22" height="22" viewBox="0 0 21 21"><path fill="none" stroke="#888888" stroke-linecap="round" stroke-linejoin="round" d="m14.5 8.5l-4 4l-4-4"/></svg>
-          </span>
+        <div className={'mt-8 flex flex-col justify-center items-center space-x-1 cursor-pointer'}>
+          <div className={"flex items-center"} onClick={(e) => setOptionsOpen(!optionsOpen)}>
+            <p className={'text-center text-xs'}>
+              More options
+            </p>
+            <span>
+              <svg className={optionsOpen ? 'rotate-180' : ''} width="22" height="22" viewBox="0 0 21 21"><path fill="none" stroke="#888888" stroke-linecap="round" stroke-linejoin="round" d="m14.5 8.5l-4 4l-4-4"/></svg>
+            </span>
+          </div>
+          { optionsOpen ? (
+            <div className="magicTime perspectiveDownReturn px-6 h-10">
+              OPTIONS
+            </div>
+          ) : null }
         </div>
       </div>
       <span className="text-center mt-4 text-gray-400 text-xs">
