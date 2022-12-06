@@ -14,7 +14,9 @@ class MainDocument extends Document {
         <body>
         <Main></Main>
         <NextScript />
+        <div id="toast-container" className="fixed w-full bottom-20 left-0 "></div>
         <div id="modal-root"></div>
+
         </body>
       </Html>
     );
