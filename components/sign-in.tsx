@@ -2,21 +2,29 @@ import Image from "next/image";
 import {useState} from "react";
 import login from "../pages/api/login";
 
+interface signInResponse {
+  name: string,
+  roles: string[],
+  token: string
+}
+
 export default function SignIn () {
 
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
   const [remember, setRemember] = useState(false)
 
-  const submit = (e: any) => {
+  const submit = async (e: any) => {
     e.preventDefault()
-    fetch('/api/login', {
+    let res = await fetch('/api/login', {
       method: 'POST',
       body: JSON.stringify({email, password, remember}),
       headers: {
         'Content-Type': 'application/json'
       }
     })
+    let data: signInResponse = await res.json()
+    localStorage.setItem('token', data.token)
     console.log(email, password, remember)
   }
 
