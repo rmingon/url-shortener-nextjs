@@ -28,6 +28,14 @@ const TYPE_TO_COLOR: Type = {
   "default": "bg-gray-300"
 }
 
+const TYPE_TO_BORDER_COLOR: Type = {
+  "info": "border-l-sky-500",
+  "success": "border-l-green-500",
+  "error": "border-l-red-500",
+  "warning": "border-l-orange-500",
+  "default": "border-l-gray-500"
+}
+
 const TYPE_TO_TEXT: Type = {
   "info": "Information",
   "success": "Success",
@@ -39,9 +47,9 @@ const TYPE_TO_TEXT: Type = {
 
 const Toast = ( { message, type }: ToastProps ) => {
   return (
-    <div className={"w-1/6 ml-3 magicTime slideLeftReturn rounded py-3 px-2 "+ TYPE_TO_COLOR[type || "default"]}>
-      <div className="flex flex-col">
-        <div className="font-roboto-regular mb-1">
+    <div className={"w-1/6 ml-3 magicTime border-l-4 slideLeftReturn rounded py-3 px-2 "+ TYPE_TO_COLOR[type || "default"]+" "+ TYPE_TO_BORDER_COLOR[type || "default"]}>
+      <div className="flex flex-col ">
+        <div className="font-roboto-medium mb-1">
           { TYPE_TO_TEXT[type || 'default'] }
         </div>
         <div className="text-xs font-roboto-regular">
