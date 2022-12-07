@@ -4,6 +4,18 @@ export default function Hero() {
 
   const [optionsOpen, setOptionsOpen] = useState(false)
 
+  const [url, setUrl] = useState("")
+
+  const short = () => {
+    fetch('/api/shorten-url', {
+      method: "POST",
+      body: JSON.stringify({url}),
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    })
+  }
+
   return (
     <div className={'px-24 lg:px-52 w-full flex flex-col'}>
       <div className={'text-center flex flex-col w-full items-center mt-10'}>
@@ -17,9 +29,9 @@ export default function Hero() {
                 <svg className={'stroke-slate-300'} width="26" height="26" viewBox="0 0 21 21"><path fill="none" stroke-linecap="round" stroke-linejoin="round" d="m9.5 7.328l1-1a2.828 2.828 0 0 1 4 4l-1 1M10.328 14.5l-1 1a2.828 2.828 0 1 1-4-4l1-1m1.172-5v-3m-5 5h3m8 11v-3m2-2h3"/></svg>
               </div>
               <input type="text" className="bg-gray-200/[.60] h-20 w-full pl-12 pr-24 rounded-lg z-0 text-xl"
-                     placeholder="Url to shorten..."/>
+                     placeholder="Url to shorten..." onInput={e=>setUrl(e.target.value)} value={url}/>
               <div className="absolute top-4 right-10">
-                <button className="shadow-2xl h-12 w-24 text-gray-200 rounded-lg from-purple-600 bg-gradient-to-r to-purple-900 hover:bg-violet-900 transition duration-200 hover:shadow-xl active:shadow-inner ring-2 ring-offset-2 ring-purple-500/50">Shorten</button>
+                <button onClick={short} className="shadow-2xl h-12 w-24 text-gray-200 rounded-lg from-purple-600 bg-gradient-to-r to-purple-900 hover:bg-violet-900 transition duration-200 hover:shadow-xl active:shadow-inner ring-2 ring-offset-2 ring-purple-500/50">Shorten</button>
               </div>
             </div>
         </div>
