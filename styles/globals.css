@@ -10,7 +10,7 @@
 }
 
 @font-face {
-    font-family: 'Roboto-Thin';
+    font-family: 'Roboto-Light';
     src: url('../asset/fonts/Roboto-Thin.ttf');
 }
 
@@ -19,10 +19,14 @@
     src: url('../asset/fonts/Roboto-Regular.ttf');
 }
 
-
 @font-face {
     font-family: 'Roboto-Bold';
     src: url('../asset/fonts/Roboto-Bold.ttf');
+}
+
+@font-face {
+    font-family: 'Roboto-Medium';
+    src: url('../asset/fonts/Roboto-Medium.ttf');
 }
 
 .font-microbe{
@@ -40,9 +44,13 @@
     font-weight: 400;
 }
 
-
 .font-roboto-bold {
     font-family: 'Roboto-Bold', sans-serif;
+    font-weight: 400;
+}
+
+.font-roboto-medium {
+    font-family: 'Roboto-Medium', sans-serif;
     font-weight: 400;
 }
 
