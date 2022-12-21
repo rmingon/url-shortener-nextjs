@@ -4,14 +4,15 @@ import {useState} from "react";
 export default function SignUp () {
 
   const [email, setEmail] = useState("")
+  const [pseudo, setPseudo] = useState("")
   const [password, setPassword] = useState("")
-  const [retypePassword, serRetypePassword] = useState("")
+  const [retypePassword, setRetypePassword] = useState("")
 
   const submit = (e: any) => {
     e.preventDefault()
     fetch('/api/registration', {
       method: 'POST',
-      body: JSON.stringify({email, password}),
+      body: JSON.stringify({email, password, meta: {pseudo}}),
       headers: {
         'Content-Type': 'application/json'
       }
@@ -35,6 +36,12 @@ export default function SignUp () {
                      placeholder="Email address" onInput={e => setEmail(e.target.value)} value={email}/>
             </div>
             <div>
+              <label htmlFor="pseudo" className="sr-only">Pseudo</label>
+              <input id="pseudo" name="pseudo" type="text" autoComplete="pseudo" required
+                     className="relative block w-full appearance-none rounded-none border border-gray-300 px-3 py-2 text-gray-900 placeholder-gray-500 focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
+                     placeholder="Pseudo" onInput={e => setPseudo(e.target.value)} value={pseudo}/>
+            </div>
+            <div>
               <label htmlFor="password" className="sr-only">Password</label>
               <input id="password" name="password" type="password" autoComplete="current-password" required
                      className="relative block w-full appearance-none rounded-none border border-gray-300 px-3 py-2 text-gray-900 placeholder-gray-500 focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
@@ -44,7 +51,7 @@ export default function SignUp () {
               <label htmlFor="retype-password" className="sr-only">Retype password</label>
               <input id="retype-password" name="password" type="password" autoComplete="current-password" required
                      className="relative block w-full appearance-none rounded-none rounded-b-md border border-gray-300 px-3 py-2 text-gray-900 placeholder-gray-500 focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
-                     placeholder="Retype Password" onInput={e => serRetypePassword(e.target.value)} value={retypePassword}/>
+                     placeholder="Retype Password" onInput={e => setRetypePassword(e.target.value)} value={retypePassword}/>
             </div>
           </div>
 
