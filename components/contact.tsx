@@ -1,6 +1,6 @@
 export default function Contact() {
   return (
-    <div className="bg-violet-900">
+    <div className="bg-violet-900 pb-4">
       <div className="text-center pt-12">
         <span className="font-roboto-bold text-xl text-gray-200">
           Subscribe to our newsletter

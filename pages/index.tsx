@@ -25,7 +25,7 @@ export default function Home() {
         <div className="bg-violet-900 h-[112] -mt-6 px-24">
           <div className={'flex justify-around'}>
             <div className="z-10 pr-10 mt-4">
-              <span className={'font-roboto-bold text-gray-200 text-4xl w-2/3 mt-12'}>
+              <span className={'font-roboto-medium text-gray-200 text-4xl w-2/3 mt-12'}>
                 Build custom audiance for <span className={'text-yellow-500'}>every customer</span>
               </span>
               <p className="mt-2 text-gray-200">
