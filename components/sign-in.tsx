@@ -1,6 +1,8 @@
 import Image from "next/image";
-import {useState} from "react";
-import login from "../pages/api/login";
+import {Dispatch, useState} from "react";
+import jwtDecode from "jwt-decode";
+import {useUser} from "../context/user-context";
+import {toast} from "./toast";
 
 interface signInResponse {
   name: string,
@@ -8,11 +10,12 @@ interface signInResponse {
   token: string
 }
 
-export default function SignIn () {
+export default function SignIn ({setShowModal}: {setShowModal: Dispatch<boolean>}) {
 
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
   const [remember, setRemember] = useState(false)
+  const { user, setUser } = useUser();
 
   const submit = async (e: any) => {
     e.preventDefault()
@@ -23,9 +26,16 @@ export default function SignIn () {
         'Content-Type': 'application/json'
       }
     })
-    let data: signInResponse = await res.json()
-    localStorage.setItem('token', data.token)
-    console.log(email, password, remember)
+    if (res.status === 401) {
+      toast.notify("Erreur mot de passe ou login", {duration: 3 , type: "warning"})
+    } else {
+      let data: signInResponse = await res.json()
+      localStorage.setItem('token', data.token)
+      setUser(jwtDecode(data.token))
+      toast.notify("Bienvenue", {duration: 3 , type: "info"})
+      setShowModal(false)
+    }
+
   }
 
   return (
