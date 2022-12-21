@@ -16,6 +16,7 @@
     "eslint": "8.28.0",
     "eslint-config-next": "13.0.5",
     "jsonwebtoken": "^8.5.1",
+    "jwt-decode": "^3.1.2",
     "next": "13.0.5",
     "pouchdb": "^7.3.1",
     "pouchdb-authentication": "^1.1.3",
