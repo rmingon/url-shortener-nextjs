@@ -21,8 +21,8 @@ export default function Home() {
         <Cards/>
       </section>
       <section className="mt-24">
-        <div className="bg-violet-900 h-10 rotate-2 mt-12"></div>
-        <div className="bg-violet-900 h-[112] -mt-6 px-24">
+        <div className="bg-violet-900 h-24 rotate-2 mt-12"></div>
+        <div className="bg-violet-900 h-[112] -mt-10 px-24">
           <div className={'flex justify-around'}>
             <div className="z-10 pr-10 mt-4">
               <span className={'font-roboto-medium text-gray-200 text-4xl w-2/3 mt-12'}>
