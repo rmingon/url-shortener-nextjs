@@ -1,6 +1,6 @@
-import Sidebar from "../components/sidebar";
+import Sidebar from "../../components/sidebar";
 
-export default function Profile () {
+export default function Index () {
   return (
       <div className={"flex h-screen"}>
         <div className={"w-2/12"}>
