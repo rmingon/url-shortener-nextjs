@@ -1,4 +1,4 @@
-import Sidebar from "../../components/sidebar";
+import Sidebar from "../../components/molecules/sidebar";
 
 export default function Index () {
   return (
