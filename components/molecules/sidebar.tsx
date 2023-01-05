@@ -1,5 +1,5 @@
 import Link from "next/link";
-import SidebarButton from "./atoms/sidebar_button";
+import SidebarButton from "../atoms/sidebar_button";
 
 export default function Sidebar () {
     return (
